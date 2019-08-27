@@ -61,6 +61,7 @@ public class Student {
      
     public void displaybalance(){
         System.out.println("your balance is: $" + cost_of_course);
+     
     }
     public void paytution(){
         displaybalance();
@@ -78,6 +79,4 @@ public class Student {
                 +"\nStudentID: " + StudentID +"\nBranch Name: " + courses +"\nBalance: " + cost_of_course;
                 
     }
-    
-    
 }
