@@ -1,0 +1,67 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication21;
+
+import java.util.Random;
+import java.util.Scanner;
+
+/**
+ *
+ * @author DELL
+ */
+public class RajCoding {
+
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Intial coding points:");
+        int InitialStage = obj.nextInt();
+        System.out.println("middle coding points:");
+        int middleStange = obj.nextInt();
+        System.out.println("final coding points:");
+        int finalStage = obj.nextInt();
+        System.out.println("End of the day performance rating:");
+        int period = obj.nextInt();
+
+        System.out.println("my coding points:");
+        int mystage = obj.nextInt();
+        System.out.println("my learning points:");
+        int mylearning = obj.nextInt();
+        System.out.println("my difficulties:");
+        int mydifficulties = obj.nextInt();
+        System.out.println("End of the day rating:");
+        int myEndperiod = obj.nextInt();
+
+        Random create = new Random();
+        boolean points = create.nextBoolean();
+        if (points) {
+            System.out.println("your points");
+            int X = create.nextInt(5) + 1 + create.nextInt(5) + 1;
+            int pointsvalue = mystage + X;
+            System.out.println("Actual points: " + X);
+            System.out.println("my Stage point: " + pointsvalue);
+            if (pointsvalue > middleStange) {
+                System.out.println("your coding was success.");
+                period = period - mylearning;
+                System.out.println("End of the day performance rating: " + period);
+            } else {
+                System.out.println("Your coding was not satisfied");
+            }
+        } else {
+            System.out.println("InitialStage.");
+        }
+        int X = create.nextInt(5) + 1 + create.nextInt(5) + 1;
+        int pointsvalue = InitialStage + X;
+        System.out.println("Actual points." + X);
+        System.out.println("my Stage point." + pointsvalue);
+        if (InitialStage > mylearning) {
+            System.out.println("MY coding is success:");
+            myEndperiod = myEndperiod - finalStage;
+            System.out.println("Raj remaining points: " + myEndperiod);
+        } else {
+            System.out.println("Raj coding was success.");
+        }
+    }
+}
